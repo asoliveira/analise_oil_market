@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "Preparar os dados\n  colocar o lag no dataframe\n\nPreciso realizar uma análise de colinearidade\n\n  minha matriz cão pode possuir depêndencia de colinearidade\n",
+    "created" : 1479675780649.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1975144143",
+    "id" : "C61A9C9A",
+    "lastKnownWriteTime" : 1479675954,
+    "last_content_update" : 1479675954581,
+    "path" : "~/Analista/data_base/opec/guideline",
+    "project_path" : "guideline",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "text"
+}

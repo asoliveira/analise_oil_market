@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "options(max.print = 20)\nrequire(zoo)\n\nopec_basket <- read.csv2(\"data_05_11_16.csv\", header = T, \n                         sep=\",\", dec=\".\", \n                         colClasses = c(\"Date\", \"numeric\")) \n\nopec_basket <- zoo(opec_basket)\n\nopec_basket <- merge(opec_basket,lag(opec_basket[,2], -(1:2)))\n\nopec_basket[is.na(opec_basket)]<-0\n\nopec_basket <- na.exclude(opec_basket, 0)\nopec_basket <- as.data.frame(opec_basket[,(2:4)] , \n                             row.names=as.Date.factor(opec_basket[,1]))\n\nopec_basket$Value <- as.numeric(as.character(opec_basket$Value))\nopec_basket$\"lag-1\" <- as.numeric(as.character(opec_basket$\"lag-1\"))\nopec_basket$\"lag-2\" <- as.numeric(as.character(opec_basket$\"lag-2\"))\n\nopec_l <- lm(opec_basket[,1] ~ opec_basket[,2])\nplot(opec_basket$Value)\nabline(opec_l)\n\n#Histograma\n#hist(as.numeric(levels(opec_basket[,2])))",
+    "created" : 1479206490067.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1447983835",
+    "id" : "2DC2FC37",
+    "lastKnownWriteTime" : 1479773895,
+    "last_content_update" : 1479773895,
+    "path" : "~/Analista/data_base/opec/analise_opec.R",
+    "project_path" : "analise_opec.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#Scrap of my script analysis \n\n\n#ts_opec_basket <- ts(opec_basket, start=c(2003,01,02), \n#        end = c(2016,02,01), frequency = 1)\n#summary(ts_opec_basket)\n\ncycle(ts_opec_basket)\nsummary(opec_basket)\n?lag\nopec <- opec_basket\nopec[\"lag1\"] <-lag(opec_basket[,2], k=1)\nna.action(lag(opec_basket[,2], k=1))\n?na.action\n",
+    "created" : 1479675613764.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2054805498",
+    "id" : "23B3FCBC",
+    "lastKnownWriteTime" : 1479675666,
+    "last_content_update" : 1479675666417,
+    "path" : "~/Analista/data_base/opec/scrap.R",
+    "project_path" : "scrap.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}
