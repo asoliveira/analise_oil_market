@@ -21,7 +21,7 @@ opec_basket$"lag-2" <- as.numeric(as.character(opec_basket$"lag-2"))
 
 opec_l <- lm(opec_basket[,1] ~ opec_basket[,2])
 plot(opec_basket$Value)
-abline(opec_l)
+#abline(opec_l)
 
 #Histograma
 #hist(as.numeric(levels(opec_basket[,2])))
